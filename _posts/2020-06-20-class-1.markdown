@@ -1,0 +1,22 @@
+---
+repo: 01_uy23_nov_09
+number: 1
+show_download: false
+---
+
+# Glossary
+
+* terminal in linux
+* cmd / command prompt in windows
+* graphical user interface (GUI)
+
+
+# command 
+* to view listing from a folder we use `dir` in windows `ls` in linux
+* to change directory `cd <folder name>`
+
+
+
+
+
+
