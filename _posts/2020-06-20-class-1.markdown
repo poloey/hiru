@@ -6,15 +6,35 @@ show_download: false
 
 # Glossary
 
-* terminal in linux
+* terminal in linux - bash
 * cmd / command prompt in windows
 * graphical user interface (GUI)
+* unix, linux, windows
 
 
-# command 
+## Command 
 * to view listing from a folder we use `dir` in windows `ls` in linux
 * to change directory `cd <folder name>`
 
+* file create  `touch <file name with extension>`
+* file view `cat <file name>`
+* folder view `ls` - listing 
+* folder view for another folder `ls <folder name>`
+* folder create `mkdir <folder name>` - make directory
+* to go inside in a folder `<cd <folder name>` - change directory
+* file move one place to another `<mv <source> <destination>`
+* file copy one place to another
+* file rename
+* file remove
+* folder remove 
+* to clearn terminal view - `clear`
+* to know present working directory `pwd`
+
+## identification
+* home location ( c:/users/club asia holidays) ~ (tilde)
+* `*` means everything
+* `.` means current folder
+* `..` parents folder
 
 
 
