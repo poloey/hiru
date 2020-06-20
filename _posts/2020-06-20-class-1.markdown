@@ -23,15 +23,19 @@ show_download: false
 * folder create `mkdir <folder name>` - make directory
 * to go inside in a folder `<cd <folder name>` - change directory
 * file move one place to another `<mv <source> <destination>`
-* file copy one place to another
-* file rename
+* file copy one place to another `<cp <source> <destination>`
+* file rename  `<move <source> <destination>`
+* file remove
+* folder remove 
+* to clearn terminal view - `clear`
+* to know present working directory `pwd`
 * file remove
 * folder remove 
 * to clearn terminal view - `clear`
 * to know present working directory `pwd`
 
 ## identification
-* home location ( c:/users/club asia holidays) ~ (tilde)
+* `~` home location ( c:/users/club asia holidays) ~ (tilde)
 * `*` means everything
 * `.` means current folder
 * `..` parents folder
