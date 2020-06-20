@@ -4,6 +4,9 @@ number: 1
 show_download: false
 ---
 
+# Software we used for git bash in windows
+We've install `Git` for using bash terminal
+
 # Glossary
 
 * terminal in linux - bash
