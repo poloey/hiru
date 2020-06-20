@@ -16,21 +16,17 @@ We've install `Git` for using bash terminal
 
 
 ## Command 
-* to view listing from a folder we use `dir` in windows `ls` in linux
+* to view listing from a folder we use `dir` in windows, `ls` in linux
 * to change directory `cd <folder name>`
 * file create  `touch <file name with extension>`
 * file view `cat <file name>`
 * folder view `ls` - listing 
-* folder view for another folder `ls <folder name>`
+* folder view for another folder `ls <folder location>`
 * folder create `mkdir <folder name>` - make directory
-* to go inside in a folder `<cd <folder name>` - change directory
-* file move one place to another `<mv <source> <destination>`
-* file copy one place to another `<cp <source> <destination>`
-* file rename  `<move <source> <destination>`
-* file remove
-* folder remove 
-* to clearn terminal view - `clear`
-* to know present working directory `pwd`
+* to go inside in a folder `cd <folder name>` - change directory
+* file move one place to another `mv <source> <destination>`
+* file copy one place to another `cp <source> <destination>`
+* file rename  `move <source> <destination>`
 * file remove `rm <file name>`
 * folder remove `rmdir <folder name>`
 * recursively remove `rm -r <folder name>`
