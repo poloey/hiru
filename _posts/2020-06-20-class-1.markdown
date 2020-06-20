@@ -15,7 +15,6 @@ show_download: false
 ## Command 
 * to view listing from a folder we use `dir` in windows `ls` in linux
 * to change directory `cd <folder name>`
-
 * file create  `touch <file name with extension>`
 * file view `cat <file name>`
 * folder view `ls` - listing 
@@ -29,8 +28,9 @@ show_download: false
 * folder remove 
 * to clearn terminal view - `clear`
 * to know present working directory `pwd`
-* file remove
-* folder remove 
+* file remove `rm <file name>`
+* folder remove `rmdir <folder name>`
+* recursively remove `rm -r <folder name>`
 * to clearn terminal view - `clear`
 * to know present working directory `pwd`
 
@@ -38,7 +38,18 @@ show_download: false
 * `~` home location ( c:/users/club asia holidays) ~ (tilde)
 * `*` means everything
 * `.` means current folder
-* `..` parents folder
+* `..` parent folder
+
+## flag
+flag always start with a hyphen `-`
+
+* `r` - recursive 
+* `f` - force
+
+
+
+
+
 
 
 
