@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Class 32 | UY-23</title>
+  <link rel="icon" href="http://localhost:4000/uy23/assets/images/page/favicon.ico">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="/uy23/assets/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/uy23/css/style.css">
+</head>
+<body class="bg_random_color">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="http://localhost:4000/uy23/">UY-23</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/uy23/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/uy23/about">About</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/uy23/type" target="_blank">Type</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/uy23/students">Students</a>
+          </li>
+          <li class="nav-item ">
+            <a href="http://localhost:4000/uy23/notices" class="nav-link">Notices</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container bg-light py-5 my-5">
+  <div class="py-2 text-center">
+      <h1 class="title">
+        Class 32
+      </h1>
+      <h3 class="text-muted">
+          Jan 30, 2018 - Tue
+      </h3>
+      </h1>
+      <hr>
+      <div>
+        
+          <a target="_blank" class="btn btn-lg btn-outline-info mx-3 my-3" href="https://github.com/poloey/32_uy23_jan_30">View On Github</a>
+        
+        
+          <a class="btn btn-lg btn-outline-danger mx-3" href="https://codeload.github.com/poloey/32_uy23_jan_30/zip/master">Download class file</a>
+        
+      </div>
+      <hr>
+  </div>
+
+  <div class="">
+    <h2 id="simple-file-uploading-in-php">simple file uploading in php</h2>
+
+<hr />
+
+<h3 id="enctype">enctype</h3>
+<p>When we upload file we have to set a <code class="highlighter-rouge">enctype="multipart/form-data"</code> attribute to <code class="highlighter-rouge">form</code> tag.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">method=</span><span class="s">"post"</span> <span class="na">enctype=</span><span class="s">"multipart/form-data"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h3 id="to-create-a-folder-in-php">to create a folder in php</h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span><span class="p">(</span><span class="s1">'foldername'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="to-check-any-file-or-folder-exists-we-use-file_exists-function-which-will-return-boolean">to check any file or folder exists we use <code class="highlighter-rouge">file_exists</code> function. which will return boolean</h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//file
+</span><span class="nb">file_exists</span><span class="p">(</span><span class="s1">'hello.txt'</span><span class="p">)</span>
+<span class="c1">//folder
+</span><span class="nb">file_exists</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="to-upload-file-in-php-we-use-move_uploaded_file-function-which-takes-2-arguments-file-and-destination-location">to upload file in php we use <code class="highlighter-rouge">move_uploaded_file</code> function. Which takes 2 arguments. file and destination location.</h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">move_uploaded_file</span><span class="p">(</span><span class="nv">$tmp_name</span><span class="p">,</span> <span class="nv">$destination</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="uploading-code-in-at-a-glance">Uploading code in at a glance</h3>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_FILES</span><span class="p">[</span><span class="s1">'file'</span><span class="p">]))</span> <span class="p">{</span>
+  <span class="nv">$file</span> <span class="o">=</span> <span class="nv">$_FILES</span><span class="p">[</span><span class="s1">'file'</span><span class="p">];</span>
+  <span class="nv">$name</span> <span class="o">=</span> <span class="nv">$file</span><span class="p">[</span><span class="s1">'name'</span><span class="p">];</span>
+  <span class="nv">$tmp_name</span> <span class="o">=</span> <span class="nv">$file</span><span class="p">[</span><span class="s1">'tmp_name'</span><span class="p">];</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span> <span class="nb">file_exists</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nb">mkdir</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="nv">$destination</span> <span class="o">=</span> <span class="s1">'hello/'</span> <span class="o">.</span> <span class="nv">$name</span><span class="p">;</span>
+  <span class="nb">move_uploaded_file</span><span class="p">(</span><span class="nv">$tmp_name</span><span class="p">,</span> <span class="nv">$destination</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="file-uploading-in-php-conditionally">file uploading in php conditionally</h2>
+
+<h3 id="in_array">in_array()</h3>
+
+<p>To check whether value exists in array or not</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$fruit</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'apple'</span><span class="p">,</span> <span class="s1">'orange'</span><span class="p">,</span> <span class="s1">'banana'</span><span class="p">,</span> <span class="s1">'mango'</span><span class="p">];</span>
+<span class="nb">in_array</span><span class="p">(</span><span class="s1">'apple'</span><span class="p">,</span> <span class="nv">$fruit</span><span class="p">);</span> <span class="c1">// true
+</span><span class="nb">in_array</span><span class="p">(</span><span class="s1">'jackfruit'</span><span class="p">,</span> <span class="nv">$fruit</span><span class="p">);</span> <span class="c1">// false
+</span></code></pre></div></div>
+
+<h3 id="end">end()</h3>
+
+<p>It will extract last value from array</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$array</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'dhaka'</span><span class="p">,</span> <span class="s1">'chittagong'</span><span class="p">,</span> <span class="s1">'borishal'</span><span class="p">,</span> <span class="s1">'feni'</span><span class="p">];</span>
+<span class="nb">end</span><span class="p">(</span><span class="nv">$array</span><span class="p">)</span> <span class="c1">// feni
+</span></code></pre></div></div>
+
+<h3 id="explode">explode()</h3>
+
+<p>It will explode string into array</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$string</span> <span class="o">=</span> <span class="s1">'apple, orange, banana'</span><span class="p">;</span>
+<span class="nb">explode</span><span class="p">(</span><span class="s1">','</span><span class="p">,</span> <span class="nv">$string</span><span class="p">);</span> <span class="c1">// ['apple', 'orange', 'banana']
+</span></code></pre></div></div>
+
+<h3 id="implode">implode()</h3>
+
+<p>It will implode array into string</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$array</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'apple'</span><span class="p">,</span> <span class="s1">'orange'</span><span class="p">,</span> <span class="s1">'banana'</span><span class="p">];</span>
+<span class="nb">implode</span><span class="p">(</span><span class="s1">','</span><span class="p">,</span> <span class="nv">$array</span><span class="p">);</span> <span class="c1">//  'apple, orange, banana'
+</span></code></pre></div></div>
+
+<p>all php code for conditional file upload in php</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$message</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_FILES</span><span class="p">[</span><span class="s1">'image'</span><span class="p">]))</span> <span class="p">{</span>
+  <span class="nv">$file</span> <span class="o">=</span> <span class="nv">$_FILES</span><span class="p">[</span><span class="s1">'image'</span><span class="p">];</span>
+  <span class="nv">$name</span> <span class="o">=</span> <span class="nv">$file</span><span class="p">[</span><span class="s1">'name'</span><span class="p">];</span> <span class="c1">//arafat.jpg
+</span>  <span class="nv">$exploded_name</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s1">'.'</span><span class="p">,</span> <span class="nv">$name</span><span class="p">);</span> <span class="c1">// ['arafat', 'jpg'];
+</span>  <span class="nv">$extension</span> <span class="o">=</span> <span class="nb">end</span><span class="p">(</span><span class="nv">$exploded_name</span><span class="p">);</span> <span class="c1">//jpg
+</span>  <span class="nv">$source</span> <span class="o">=</span> <span class="nv">$file</span><span class="p">[</span><span class="s1">'tmp_name'</span><span class="p">];</span>
+  <span class="nv">$supported_extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'jpg'</span><span class="p">,</span> <span class="s1">'png'</span><span class="p">,</span> <span class="s1">'jpeg'</span><span class="p">,</span> <span class="s1">'gif'</span><span class="p">];</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nb">in_array</span><span class="p">(</span><span class="nv">$extension</span><span class="p">,</span> <span class="nv">$supported_extensions</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nb">move_uploaded_file</span><span class="p">(</span><span class="nv">$source</span><span class="p">,</span> <span class="s1">'hello/'</span><span class="o">.</span><span class="nv">$name</span><span class="p">);</span>
+    <span class="nv">$message</span> <span class="o">=</span> <span class="s1">'your picture uploaded successfully'</span><span class="p">;</span>
+  <span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+    <span class="nv">$message</span> <span class="o">=</span> <span class="s1">'Please upload only image file'</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="global-scope-and-local-scope">Global scope and local scope</h2>
+
+<p>php has 3 scope for variable. Today I have demonstrated 3 scope</p>
+
+<ul>
+  <li>local</li>
+  <li>global</li>
+  <li>static</li>
+</ul>
+
+<p>If we declare a variable outside function it will be global scope. Inside function declaring a variable call local scope.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$city</span> <span class="o">=</span> <span class="s1">'city variable outside function'</span> <span class="p">;</span> <span class="c1">// global scope
+</span><span class="k">function</span> <span class="nf">test</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nv">$hello</span> <span class="o">=</span> <span class="s1">'hello variable inside function'</span><span class="p">;</span> <span class="c1">// local scope
+</span>  <span class="k">echo</span> <span class="nv">$city</span><span class="p">;</span> <span class="c1">// I can't access $city variable since $city is outside function. I mean $city variable in global scopa      
+</span><span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="how-can-we-access-global-scope-inside-function">How can we access global scope inside function</h3>
+
+<p>using <code class="highlighter-rouge">global</code> keyword or $GLOBALS super global we can access global scoped variable locally</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$city</span> <span class="o">=</span> <span class="s1">'city variable outside function'</span> <span class="p">;</span> <span class="c1">// global scope
+</span><span class="k">function</span> <span class="nf">test</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nv">$hello</span> <span class="o">=</span> <span class="s1">'hello variable inside function'</span><span class="p">;</span> <span class="c1">// local scope
+</span>  <span class="k">global</span> <span class="nv">$city</span><span class="p">;</span>
+  <span class="k">echo</span> <span class="nv">$city</span><span class="p">;</span> <span class="c1">// Here I can access $city variable since earlier line I have added global keyword 
+</span>  <span class="k">echo</span> <span class="nv">$GLOBALS</span><span class="p">[</span><span class="s1">'city'</span><span class="p">]</span>  <span class="c1">// Using super global we can access $city variable     
+</span><span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="search-with-php-mysql">Search with php mysql</h2>
+
+<p>Sql query for search is</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="k">table_name</span> <span class="k">where</span> <span class="k">column_name</span> <span class="k">like</span> <span class="s1">'%your_query_word%'</span>    
+</code></pre></div></div>
+
+<p>So we will make a form with name q. which can be accessed by <code class="highlighter-rouge">$_GET</code> super global. Initially we will fetch all data from database but if user search for something we will filtering query by user search keyword</p>
+
+<p>html part</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"q"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"search here ....."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"input-group-append btn btn-primary"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+
+<p>php part</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span> 
+
+<span class="nv">$con</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s1">'mysql:host=localhost;dbname=search'</span><span class="p">,</span> <span class="s1">'root'</span><span class="p">,</span> <span class="s1">''</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'q'</span><span class="p">]))</span> <span class="p">{</span>
+  <span class="nv">$q</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">'q'</span><span class="p">];</span>
+  <span class="nv">$statement</span> <span class="o">=</span> <span class="nv">$con</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"select * from people where name like :name or email like :email"</span><span class="p">);</span>
+  <span class="nv">$statement</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span>
+    <span class="s1">':name'</span> <span class="o">=&gt;</span> <span class="s1">'%'</span><span class="o">.</span><span class="nv">$q</span><span class="o">.</span><span class="s1">'%'</span><span class="p">,</span>
+    <span class="s1">':email'</span> <span class="o">=&gt;</span> <span class="s1">'%'</span><span class="o">.</span><span class="nv">$q</span><span class="o">.</span><span class="s1">'%'</span><span class="p">,</span>
+  <span class="p">]);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nv">$statement</span> <span class="o">=</span> <span class="nv">$con</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s1">'select * from people'</span><span class="p">);</span>
+  <span class="nv">$statement</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="nv">$people</span> <span class="o">=</span> <span class="nv">$statement</span><span class="o">-&gt;</span><span class="na">fetchAll</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_OBJ</span><span class="p">);</span>
+ <span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+  </div>
+
+  <div class="text-center p-5">
+    
+      <a class="btn btn-info btn-lg .d-inline-block my-1" href="http://localhost:4000/uy23/class-31/">&laquo; Class 31</a>
+    
+    
+      <a class="btn btn-success btn-lg .d-inline-block my-1" href="http://localhost:4000/uy23/class-33/">Class 33 &raquo;</a>
+    
+  </div>
+
+
+    <div class="my-5">
+    <div id="disqus_thread"></div>
+    <script>
+
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ey-h43.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+</div>
+
+
+  <footer class="bg_random_color text-light py-5 mt-5">
+    <div class="container">
+      
+      <p><a class="text-light text-underline" href="http://localhost:4000/uy23/">UY-23</a> is maintained by Shibu deb polo.</p>
+      <p> <a class="btn-link text-light" href="https://poloey.gitlab.io/"> <i class="fa fa-github" aria-hidden="true"></i> All Batches </a> </p>
+      <p>
+        <a class="btn-link text-light" target="_blank" href="https://www.facebook.com/groups/topupuy23/">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          Group
+        </a>
+      </p>
+      <p>
+        <a class="btn-link text-light" target="_blank" href="https://web.facebook.com/messages/t/1710131265718158">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          messenger
+        </a>
+      </p>
+      <p class="footer-text">
+        Hosted on Github Page. This Website will be references for LICT UY-23 batch for life time. Since Github page will never down. Thanks to opensource technology. Hope this attempt make work flow easier for all students of UY-23 batch. Added daily documentation and class file in this website
+      </p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="/uy23/assets/bootstrap/popper.min.js"></script>
+  <script src="/uy23/assets/bootstrap/bootstrap.min.js"></script>
+  <script src="/uy23/assets/bootstrap/color.js"></script>
+</body>
+</html>

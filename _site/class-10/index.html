@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Class 10 | UY-23</title>
+  <link rel="icon" href="http://localhost:4000/uy23/assets/images/page/favicon.ico">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="/uy23/assets/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/uy23/css/style.css">
+</head>
+<body class="bg_random_color">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="http://localhost:4000/uy23/">UY-23</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/uy23/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/uy23/about">About</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/uy23/type" target="_blank">Type</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/uy23/students">Students</a>
+          </li>
+          <li class="nav-item ">
+            <a href="http://localhost:4000/uy23/notices" class="nav-link">Notices</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container bg-light py-5 my-5">
+  <div class="py-2 text-center">
+      <h1 class="title">
+        Class 10
+      </h1>
+      <h3 class="text-muted">
+          Nov 30, 2017 - Thu
+      </h3>
+      </h1>
+      <hr>
+      <div>
+        
+          <a target="_blank" class="btn btn-lg btn-outline-info mx-3 my-3" href="https://github.com/poloey/10_uy23_nov_30">View On Github</a>
+        
+        
+          <a class="btn btn-lg btn-outline-danger mx-3" href="https://codeload.github.com/poloey/10_uy23_nov_30/zip/master">Download class file</a>
+        
+      </div>
+      <hr>
+  </div>
+
+  <div class="">
+    <h1 id="document-object-model-dom---web-api">Document Object Model (DOM) - Web API</h1>
+
+<h3 id="notice-about-this-page">Notice about this page</h3>
+<p>If you get any Error or typo in this page, please let me know so that, I can correct this page. Please go through class 10 again and again since, in that class I have introduced programming using javaScript. Which is foundation of javascript or any other programming language.</p>
+
+<h2 id="how-to-write-something-in-html-page-through-js">How to write something in html page through js</h2>
+<p>We can write content inside <code class="highlighter-rouge">html document</code> through javaScript in lot of ways. Today I have showed how can we write something in html page using <code class="highlighter-rouge">id</code> selector.   <br />
+first create a <code class="highlighter-rouge">id</code>  inside <code class="highlighter-rouge">html</code> file. Let id name is <code class="highlighter-rouge">kayes</code></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"kayes"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>So, In order to write something inside kayes I have to select html id <code class="highlighter-rouge">kayes</code> in my script file and store in a variable. Let, I will store kayes id in <code class="highlighter-rouge">kayes_id</code> variable</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">kayes_id</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'kayes'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>So I have selected html id <code class="highlighter-rouge">kayes</code> in <code class="highlighter-rouge">kayes_id</code>. Now I can write anything inside <code class="highlighter-rouge">kayes_id</code> using <code class="highlighter-rouge">innerHTML</code>.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">kayes_id</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">'some text written in html using js'</span><span class="p">;</span>
+</code></pre></div></div>
+<p>We just output only some text. We can pass any html as well. One thing we have to keep in mind it’s a  <code class="highlighter-rouge">js</code> file. It’s not <code class="highlighter-rouge">html</code> file. So all our html code actually string. I mean we have to write <code class="highlighter-rouge">html</code> inside double or single quote. Go with only one. Never mix double quote with single quote. Other wise we  will be confused. Here I have used single quote. <br />
+Now I out put some html content</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">kayes_id</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">'&lt;h1&gt;First Heading from js.&lt;/h1&gt;'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>So we write some heading content in side kayes_id. We can write content using variable when we needed.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">heading</span> <span class="o">=</span> <span class="s1">'&lt;h1&gt;First Heading from js.&lt;/h1&gt;'</span><span class="p">;</span>
+<span class="nx">kayes_id</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">heading</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>State above code we assign <code class="highlighter-rouge">'&lt;h1&gt;First Heading from js&lt;/h1&gt;'</code> to <code class="highlighter-rouge">heading</code> variable. So now we can write <code class="highlighter-rouge">kayes_id.innerHTML = heading;</code>.   <br />
+How actually variable will help us, we will be understad by following code.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="s1">'&lt;h1&gt;First Heading from js.&lt;/h1&gt;'</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">content</span> <span class="o">+</span> <span class="s1">'&lt;p&gt;Some paragraph text&lt;/p&gt;'</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">content</span> <span class="o">+</span> <span class="s1">'&lt;ul&gt;'</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">content</span> <span class="o">+</span> <span class="s1">'&lt;li&gt;Apple&lt;/li&gt;'</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">content</span> <span class="o">+</span> <span class="s1">'&lt;li&gt;Orange&lt;/li&gt;'</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">content</span> <span class="o">+</span> <span class="s1">'&lt;li&gt;Banana&lt;/li&gt;'</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">content</span> <span class="o">+</span> <span class="s1">'&lt;/ul&gt;'</span><span class="p">;</span>
+
+<span class="nx">kayes_id</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">content</span><span class="p">;</span>
+</code></pre></div></div>
+<p>Here I have write a heading, paragraph, and un-ordered list using help of variable. I can write whole html content in one line but I used some <code class="highlighter-rouge">string concatenation</code> help. First I assign some content to <code class="highlighter-rouge">content</code> variable. Then in next line I add new content with previous content and assign to <code class="highlighter-rouge">content</code> variable.</p>
+
+<p>In some case we may show value from some variable in our html content.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Apple'</span><span class="p">,</span> <span class="s1">'Orange'</span><span class="p">,</span> <span class="s1">'Banana'</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="s1">'&lt;h1&gt;First Heading from js.&lt;/h1&gt;'</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">content</span> <span class="o">+</span> <span class="s1">'&lt;p&gt;Some paragraph text&lt;/p&gt;'</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">content</span> <span class="o">+</span> <span class="s1">'&lt;ul&gt;'</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">content</span> <span class="o">+</span> <span class="s1">'&lt;li&gt;'</span> <span class="o">+</span> <span class="nx">fruits</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">'&lt;/li&gt;'</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">content</span> <span class="o">+</span> <span class="s1">'&lt;li&gt;'</span> <span class="o">+</span> <span class="nx">fruits</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">'&lt;/li&gt;'</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">content</span> <span class="o">+</span> <span class="s1">'&lt;li&gt;'</span> <span class="o">+</span> <span class="nx">fruits</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="s1">'&lt;/li&gt;'</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">content</span> <span class="o">+</span> <span class="s1">'&lt;/ul&gt;'</span><span class="p">;</span>
+
+<span class="nx">kayes_id</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">content</span><span class="p">;</span>
+</code></pre></div></div>
+<p>From state above code we will get same output But here we have getting list value from variable <code class="highlighter-rouge">fruits</code>.   <br />
+We can dynamically generate <code class="highlighter-rouge">&lt;li&gt;</code> using for loop. We need loop only <code class="highlighter-rouge">0 - 2</code>. Since our array length is 3. So we can refactor our code by following</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Apple'</span><span class="p">,</span> <span class="s1">'Orange'</span><span class="p">,</span> <span class="s1">'Banana'</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="s1">'&lt;h1&gt;First Heading from js.&lt;/h1&gt;'</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">content</span> <span class="o">+</span> <span class="s1">'&lt;p&gt;Some paragraph text&lt;/p&gt;'</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">content</span> <span class="o">+</span> <span class="s1">'&lt;ul&gt;'</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">content</span> <span class="o">+</span> <span class="s1">'&lt;li&gt;'</span> <span class="o">+</span> <span class="nx">fruits</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">+</span> <span class="s1">'&lt;/li&gt;'</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">content</span> <span class="o">+</span> <span class="s1">'&lt;/ul&gt;'</span><span class="p">;</span>
+
+<span class="nx">kayes_id</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">content</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Here Insted of manually extracting value from array, we dynamically extract array value using <code class="highlighter-rouge">for</code> loop. Which will iterate 3 times.  <br />
+Here we told to <code class="highlighter-rouge">for loop</code> to iterate 3 times for getting output value 0, 1, 2. When our array length is increased we have to increse condition manually. Which is not efficient. So we can refactor our <code class="highlighter-rouge">for</code> loop using <code class="highlighter-rouge">array.length</code> helper.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">fruits</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">content</span> <span class="o">+</span> <span class="s1">'&lt;li&gt;'</span> <span class="o">+</span> <span class="nx">fruits</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">+</span> <span class="s1">'&lt;/li&gt;'</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>In string concatenation every time  we use <code class="highlighter-rouge">content = previouse_conent + new_content</code>. We can make it short by usign <code class="highlighter-rouge">+=</code> operator.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">content</span> <span class="o">=</span> <span class="nx">content</span> <span class="o">+</span> <span class="s1">'New content'</span><span class="p">;</span>
+<span class="nx">or</span> 
+<span class="nx">content</span> <span class="o">+=</span> <span class="s1">'New Content'</span><span class="p">;</span>
+</code></pre></div></div>
+<p>So If we use <code class="highlighter-rouge">+=</code> shorthand operator we write less code for same functionality.</p>
+
+<p>Please go with step by step. Do at least 2 hours practice at home. If we are not understand today class, we won’t understand tommorow class. Which evntually kill our precise time.</p>
+
+
+  </div>
+
+  <div class="text-center p-5">
+    
+      <a class="btn btn-info btn-lg .d-inline-block my-1" href="http://localhost:4000/uy23/class-9/">&laquo; Class 9</a>
+    
+    
+      <a class="btn btn-success btn-lg .d-inline-block my-1" href="http://localhost:4000/uy23/class-11/">Class 11 &raquo;</a>
+    
+  </div>
+
+
+    <div class="my-5">
+    <div id="disqus_thread"></div>
+    <script>
+
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ey-h43.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+</div>
+
+
+  <footer class="bg_random_color text-light py-5 mt-5">
+    <div class="container">
+      
+      <p><a class="text-light text-underline" href="http://localhost:4000/uy23/">UY-23</a> is maintained by Shibu deb polo.</p>
+      <p> <a class="btn-link text-light" href="https://poloey.gitlab.io/"> <i class="fa fa-github" aria-hidden="true"></i> All Batches </a> </p>
+      <p>
+        <a class="btn-link text-light" target="_blank" href="https://www.facebook.com/groups/topupuy23/">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          Group
+        </a>
+      </p>
+      <p>
+        <a class="btn-link text-light" target="_blank" href="https://web.facebook.com/messages/t/1710131265718158">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          messenger
+        </a>
+      </p>
+      <p class="footer-text">
+        Hosted on Github Page. This Website will be references for LICT UY-23 batch for life time. Since Github page will never down. Thanks to opensource technology. Hope this attempt make work flow easier for all students of UY-23 batch. Added daily documentation and class file in this website
+      </p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="/uy23/assets/bootstrap/popper.min.js"></script>
+  <script src="/uy23/assets/bootstrap/bootstrap.min.js"></script>
+  <script src="/uy23/assets/bootstrap/color.js"></script>
+</body>
+</html>

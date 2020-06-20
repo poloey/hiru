@@ -1,0 +1,22 @@
+---
+layout: page
+---
+<p><strong>Batch:</strong> {{site.title}}</p>
+<p><strong>Project Status:</strong> {{ site.project_status }}</p>
+
+{% capture numberOfProject %}{{site.projects | size }}{% endcapture %}
+{% if numberOfProject %}
+  <p><strong>No of Project:</strong> {{numberOfProject}}</p>
+  <ul class="list-group my-2">
+    {% assign sorted = site.projects | sort: 'number' %}
+    {% for project in sorted %}
+       {% unless project.published %} {% continue %}{% endunless %}
+      <li class="list-group-item bg_random_color hover_random_color">
+        <a href="{{site.url}}{{site.baseurl}}{{ project.url }}">
+          {{project.title}} - {{project.name}}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
+

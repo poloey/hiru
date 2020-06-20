@@ -1,0 +1,122 @@
+---
+layout: default
+---
+<div class="container bg-light py-5 my-5">
+  <div class="p-5 bg-info text-light text-center">
+      <h1 class="title"> <a class="student_back_button" href="{{site.url}}{{site.baseurl}}/students"> <i class="fa fa-arrow-left"></i></a>{{page.title | capitalize }}</h1>
+  </div>
+
+  {% if page.image %}
+    {%capture image %}{{page.title | downcase }}{% endcapture %}
+  {% else %}
+    {%capture image %}default{% endcapture %}
+  {% endif %}
+  <div class="card mt-5 single-student text-light bg_random_color">
+    <div class="card-body text-center">
+      <div class="text-center">
+        <img class="card-img-top"
+          style="max-width: 300px" 
+          src="{{site.url}}{{site.baseurl}}/assets/images/students/{{image}}.jpg"
+          alt="{{page.fullname}}">
+      </div>
+      <p class="my-3">{{page.fullname}}</p>
+      <p>{{page.about}}</p>
+        <div class="link-wrapper mb-5">
+          {% if page.github %}
+            <a target="_blank"  href="https://github.com/{{page.github}}">
+              <i title="github user name" class="fa fa-github" aria-hidden="true"></i>
+              Github
+            </a>
+          {% endif %}
+
+          {% if page.facebook %}
+            <a target="_blank"  href="https://facebook.com/{{page.facebook}}">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+              Facebook 
+            </a>
+          {% endif %}
+
+          {% if page.email %}
+            <div>
+              <i class="fa fa-envelope" title="email" aria-hidden="true"></i>
+              {{page.email}}
+            </div>
+          {% endif %}
+
+          {% if page.bdskills %}
+          <div>
+            <i class="fa fa-id-card" title="bd skills id" aria-hidden="true"></i>
+            {{page.bdskills}}
+          </div>
+          {% endif %}
+
+
+          {% if page.show_mobile %}
+          <div>
+            <i class="fa fa-phone"title="mobile number" aria-hidden="true"></i>
+            {{page.mobile}}
+          </div>
+          {% endif %}
+        </div>
+        {% if page.show_assignment and page.github %}
+          <ul class="list-group">
+
+            {% if page.cv %}
+              <li class="list-group-item bg_random_color hover_random_color">
+                <a
+                  target="_blank"
+                  href="https://github.com/{{page.github}}/{{page.github}}_cv"
+                  class="">
+                  CV using html and css
+                </a>
+              </li>
+            {% endif %}
+
+
+            {% if page.template %}
+              <li class="list-group-item bg_random_color hover_random_color">
+                <a
+                  target="_blank"
+                  href="https://github.com/{{page.github}}/{{page.github}}_template"
+                  class="">
+                  Template using html, css, js, jquery, bootstrap and some other plugin
+                </a>
+              </li>
+            {% endif %}
+            
+
+            {% if page.php %}
+              <li class="list-group-item bg_random_color hover_random_color">
+                <a
+                  target="_blank"
+                  href="https://github.com/{{page.github}}/{{page.github}}_php"
+                  class="">
+                  Dynamic website build with php 
+                </a>
+              </li>
+            {% endif %}
+            
+
+            {% if page.php_mysql %}
+              <li class="list-group-item bg_random_color hover_random_color">
+                <a
+                  target="_blank"
+                  href="https://github.com/{{page.github}}/{{page.github}}_php_mysql"
+                  class="">
+                  Dynamic website build with php and mysql
+                </a>
+              </li>
+            {% endif %}
+            
+
+          </ul>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+  <div class="my-3">
+    {{content}}
+  </div>
+</div>
+

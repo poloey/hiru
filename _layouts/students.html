@@ -1,0 +1,35 @@
+---
+layout: page
+---
+<div class="container bg-light py-5 my-5">
+  <div class="row d-flex flex-wrap">
+  {% assign students = site.students | sort: 'number' %}
+  {% for student in students %}
+    {% if student.image %}
+      {%capture image %}{{student.title | downcase }}{% endcapture %}
+    {% else %}
+      {%capture image %}default{% endcapture %}
+    {% endif %}
+    <div class="col-md-6 col-lg-4">
+      <div class="card my-3 bg_random_color text-white">
+        <div class="card-body">
+          <div class="student-image">
+            <a href="{{site.url}}{{site.baseurl}}{{student.url}}">
+              <img 
+                src="{{site.url}}{{site.baseurl}}/assets/images/students/{{image}}.jpg"
+                style="height: 200px" 
+                alt="{{student.fullname}}">
+            </a>
+              
+          </div>
+
+          <h4 class="card-title">{{student.fullname}}</h4>
+          <p class="card-text">{{student.title | capitalize }} is a student of {{site.title}} batch</p>
+          <a href="{{site.url}}{{site.baseurl}}{{student.url}}" class="btn text-light bg_random_color hover_random_color">View Profile</a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+  {% include disqus.html %}
+</div>

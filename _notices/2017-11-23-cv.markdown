@@ -1,0 +1,11 @@
+---
+date: 2017-11-23
+name: Assignment - Building a CV using html and css
+number: 1
+class: bg-success text-light
+homepage: true
+---
+Repo name: `<your_github_name>_cv`       
+Suppose, my github name is `poloey`. In my case, assignment repo name will be `poloey_cv` 
+
+

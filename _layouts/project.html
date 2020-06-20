@@ -1,0 +1,21 @@
+---
+layout: page
+---
+
+<p><strong>Project Name:</strong> {{page.name}}</p>
+<p><strong>Project Status</strong> {{page.status}}</p>
+<p><strong>Github:</strong> <a target="_blank" href="{{page.github}}">Link</a></p>
+{% if page.demo %}
+<p><strong>Demo:</strong> <a target="_blank" href="{{page.demo}}">Link</a></p>
+{% endif %}
+<div>
+  <strong>Team</strong>
+  {% for member in page.team%} 
+    <a class="m-2" href="{{site.url}}{{site.baseurl}}/students/{{member}}">{{member | capitalize }}</a>
+  {% endfor %}
+</div>
+
+
+<h2 class="text-center">About Project</h2>
+<hr>
+{{page.about}}

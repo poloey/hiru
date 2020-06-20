@@ -1,0 +1,29 @@
+<div class="container bg-light my-3 py-2">
+  <h2 class="title">Latest Notice</h2>
+  <hr>
+  {% assign hasNotice = false %}
+  {% for notice in site.notices %}
+     {% if notice.homepage %}
+         <div class="card my-3 {{notice.class}}">
+           <div class="card-header">
+              <a class="text-white" href="{{site.url}}{{site.baseurl}}{{ notice.url }}">
+                {{notice.name}} - on 
+                <span>
+                  {{ notice.date | date: "%b %d, %Y - %a" }}
+                </span>
+              </a>
+           </div>
+           <div class="card-body">
+            {{notice.excerpt}}
+           </div>
+         </div>
+         {% assign hasNotice = true%}
+     {% endif %}
+  {% endfor %}
+
+  {% unless hasNotice %}
+    <div class="p-4 bg_random_color text-white">
+      <h2 class="m-0">We don't have any notice yet</h2>
+    </div>
+  {% endunless %}
+</div>

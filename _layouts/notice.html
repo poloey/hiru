@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div class="container bg-light py-5 my-5">
+  <div class="p-5 text-center {{ page.class }}" >
+      <h1 class="title">{{page.name}}</h1>
+      <h2>on</h2>
+      <h2>{{ page.date | date: "%b %d, %Y - %a" }}</h2>
+
+  </div>
+  <div class="my-3">
+    {{content}}
+  </div>
+</div>

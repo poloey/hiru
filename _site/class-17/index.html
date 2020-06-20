@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Class 17 | UY-23</title>
+  <link rel="icon" href="http://localhost:4000/uy23/assets/images/page/favicon.ico">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="/uy23/assets/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/uy23/css/style.css">
+</head>
+<body class="bg_random_color">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="http://localhost:4000/uy23/">UY-23</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/uy23/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/uy23/about">About</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/uy23/type" target="_blank">Type</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/uy23/students">Students</a>
+          </li>
+          <li class="nav-item ">
+            <a href="http://localhost:4000/uy23/notices" class="nav-link">Notices</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container bg-light py-5 my-5">
+  <div class="py-2 text-center">
+      <h1 class="title">
+        Class 17
+      </h1>
+      <h3 class="text-muted">
+          Dec 19, 2017 - Tue
+      </h3>
+      </h1>
+      <hr>
+      <div>
+        
+          <a target="_blank" class="btn btn-lg btn-outline-info mx-3 my-3" href="https://github.com/poloey/17_uy23_dec_19">View On Github</a>
+        
+        
+          <a class="btn btn-lg btn-outline-danger mx-3" href="https://codeload.github.com/poloey/17_uy23_dec_19/zip/master">Download class file</a>
+        
+      </div>
+      <hr>
+  </div>
+
+  <div class="">
+    <h1 id="php-introduction">Php Introduction</h1>
+<p>Our browser only know <code class="highlighter-rouge">html</code>, <code class="highlighter-rouge">css</code>, <code class="highlighter-rouge">js</code>. So whenever I write something in php, those <code class="highlighter-rouge">php</code> code should converted into <code class="highlighter-rouge">html</code>. So that browser can render our page. So in order write php, you need <code class="highlighter-rouge">php</code> and a server in your pc. There are 2 popular server for php development <code class="highlighter-rouge">apache</code> and <code class="highlighter-rouge">ngnix</code>. In php version 7 we can create a mini server. Although in production we won’t use php mini server. We will use apache or ngnix.    <br />
+So we will use a package called <a href="https://www.apachefriends.org/index.html">xampp</a>. Which actually a package of php, apache and mysql. Its easy to use and no need any configuration. We will just install xampp. And keep php project inside <code class="highlighter-rouge">htdocs</code> folder. In our browser  we will access those file by <code class="highlighter-rouge">localhost/YourFolder</code>.  <br />
+Only 2 things you have to remember</p>
+<ul>
+  <li>You will keep your php file in <code class="highlighter-rouge">xampp &gt; htdocs &gt; feni</code> folder</li>
+  <li>In browser you can access feni folder by <code class="highlighter-rouge">http://localhost/feni</code> address.</li>
+</ul>
+
+<h1 id="programming-101-with-php-total-7-things-have-to-consider">programming 101 with php (total 7 things have to consider)</h1>
+<p>Earlier we have learned programming basic using javascript. Today I have described programming basic using php. All programming more or less same. So if you became master in one, you will be master at any language by practicing about one month. 7 things in php are (<code class="highlighter-rouge">variable</code>, <code class="highlighter-rouge">constant</code>, <code class="highlighter-rouge">datatype</code>, <code class="highlighter-rouge">control flow</code>, <code class="highlighter-rouge">function</code>, <code class="highlighter-rouge">operator</code>, <code class="highlighter-rouge">namespace</code>). Only 2 new things you will know apart fom javaScript. one is <code class="highlighter-rouge">constant</code> and another is <code class="highlighter-rouge">namespace</code></p>
+
+<ol>
+  <li>Variable   <br />
+In php variable will start with <code class="highlighter-rouge">$</code> sign
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$name</span> <span class="o">=</span> <span class="s1">'apple'</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>constant    <br />
+In php when you need to keep some value fixed in entire application you should use constant. By convention people use only uppercase when declare constant. You can write constant in 2 ways. using <code class="highlighter-rouge">const</code> keyword or <code class="highlighter-rouge">define</code> function
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">define</span><span class="p">(</span><span class="s1">'SOME_CONSTANT_NAME'</span><span class="p">,</span> <span class="s1">'apple'</span><span class="p">);</span>
+<span class="k">const</span> <span class="no">SOME_CONSTANT_NAME</span> <span class="o">=</span> <span class="s1">'apple'</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Datatype</li>
+</ol>
+
+<ul>
+  <li>Scalar type (who holds only one value)
+    <ul>
+      <li>Numbers
+        <ul>
+          <li>Integer (absolute number - 10)</li>
+          <li>Floating / Double (Fractional number 13.14)</li>
+        </ul>
+      </li>
+      <li>Boolean (True, False)</li>
+      <li>String (Text)</li>
+    </ul>
+  </li>
+  <li>Composite type (who holds mix value)
+    <ul>
+      <li>Array
+        <ul>
+          <li>Index array</li>
+          <li>Associative array
+            <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//index array
+</span><span class="nv">$names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'apple'</span><span class="p">,</span> <span class="s1">'orange'</span><span class="p">,</span> <span class="s1">'grape'</span><span class="p">];</span> 
+<span class="nv">$names</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="c1">//apple     
+// associative array
+</span><span class="nv">$names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'apple'</span><span class="p">,</span> <span class="s1">'orange'</span><span class="p">,</span> <span class="s1">'grape'</span><span class="p">];</span> 
+<span class="nv">$names</span> <span class="o">=</span> <span class="p">[</span>
+<span class="s1">'f1'</span> <span class="o">=&gt;</span> <span class="s1">'apple'</span><span class="p">,</span>
+<span class="s1">'f3'</span> <span class="o">=&gt;</span> <span class="s1">'orange'</span><span class="p">,</span>
+<span class="s1">'f3'</span> <span class="o">=&gt;</span> <span class="s1">'grape'</span>
+<span class="p">];</span>
+<span class="nv">$names</span><span class="p">[</span><span class="s1">'f1'</span><span class="p">]</span> <span class="c1">//apple
+</span></code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+      <li>Object   <br />
+In php, object will get by instantiating a class. to get object we use <code class="highlighter-rouge">new</code> keyword. A <code class="highlighter-rouge">variable</code> inside class called <code class="highlighter-rouge">properties</code>. A <code class="highlighter-rouge">function</code> inside class called <code class="highlighter-rouge">Method</code>.
+        <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$today</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Date</span><span class="p">();</span>
+<span class="nv">$today</span><span class="o">-&gt;</span><span class="na">someProperties</span><span class="o">.</span>
+<span class="nv">$today</span><span class="o">-&gt;</span><span class="na">someMethod</span><span class="p">()</span><span class="o">.</span>
+</code></pre></div>        </div>
+        <p>In php, working with object called object oriented programming. Object oriented programming has 5 features. <code class="highlighter-rouge">Encapsulation</code>, <code class="highlighter-rouge">Inheritance</code>, <code class="highlighter-rouge">polymorphism</code>, <code class="highlighter-rouge">overriding</code>, <code class="highlighter-rouge">overloading</code></p>
+        <ul>
+          <li><code class="highlighter-rouge">Encapsulation</code>: For encapsulation we use 3 visibility filter for class properties.  <code class="highlighter-rouge">public</code>, <code class="highlighter-rouge">private</code>, <code class="highlighter-rouge">protected</code>. When we use <code class="highlighter-rouge">public</code> we can access class properties or method from anywhere.  When we use <code class="highlighter-rouge">private</code> we only able to use class properties or method from inside class. When we use <code class="highlighter-rouge">protected</code> we can use class properties from own class and child class.</li>
+          <li><code class="highlighter-rouge">Inheritance</code>:  When I need to share functionality between more class we use <code class="highlighter-rouge">inheritance</code>. In this case one class will be parent class. One class will be child class. child class <code class="highlighter-rouge">extends</code> parent class. I can extends only one parent class.
+            <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Parent</span> <span class="p">{</span>
+<span class="p">}</span>
+<span class="k">class</span> <span class="nc">Child</span> <span class="k">extends</span> <span class="nx">Parent</span> <span class="p">{</span>
+<span class="p">}</span>
+</code></pre></div>            </div>
+          </li>
+          <li><code class="highlighter-rouge">polymorphism</code>: When we need to work with multiple features we generally implement polymorphism. In polymorphism we need a <code class="highlighter-rouge">interface</code> and implement by a class. I can implements lot of <code class="highlighter-rouge">interface</code>
+            <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">interface</span> <span class="nx">Parent</span> <span class="p">{</span>
+
+<span class="p">}</span>
+<span class="k">interface</span> <span class="nx">Uncle</span> <span class="p">{</span>
+
+<span class="p">}</span>
+<span class="k">class</span> <span class="nc">Child</span> <span class="k">implements</span> <span class="nx">Parent</span><span class="p">,</span> <span class="nx">Uncle</span> <span class="p">{</span>
+
+<span class="p">}</span>
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<ol>
+  <li>Control flow</li>
+</ol>
+
+<ul>
+  <li>iterative
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1">//while 
+</span>  <span class="nv">$number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">while</span><span class="p">(</span><span class="nv">$number</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="nv">$number</span><span class="p">;</span>
+    <span class="nv">$number</span> <span class="o">=</span> <span class="nv">$number</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="c1">//for, while, foreach  
+</span>
+  <span class="k">for</span> <span class="p">(</span> <span class="nv">$number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$number</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nv">$number</span> <span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="nv">$number</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>conditional
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1">//if, else, else if, elseif
+</span>  <span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="o">/</span><span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+     <span class="k">echo</span> <span class="s1">'if true'</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="kc">true</span> <span class="o">/</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">'if this block is true'</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">'any if block is not true'</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="c1">//ternary
+</span>  <span class="nv">$age</span> <span class="o">&lt;</span> <span class="mi">18</span> <span class="o">?</span> <span class="s1">'do something'</span> <span class="o">:</span> <span class="s1">'do other things'</span><span class="p">;</span>
+  <span class="c1">//switch
+</span>  <span class="nv">$wheel</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+  <span class="k">switch</span> <span class="p">(</span><span class="nv">$wheel</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+      <span class="k">echo</span> <span class="s1">'cycle'</span><span class="p">;</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">3</span><span class="o">:</span> 
+      <span class="k">echo</span> <span class="s1">'cng'</span><span class="p">;</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">4</span><span class="o">:</span>
+      <span class="k">echo</span> <span class="s1">'bus'</span><span class="p">;</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">default</span><span class="o">:</span>
+      <span class="k">echo</span> <span class="s1">'train'</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<ol>
+  <li>
+    <p>Function</p>
+
+    <p>Built in Function</p>
+
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'dhaka'</span><span class="p">,</span> <span class="s1">'comilla'</span><span class="p">,</span> <span class="s1">'feni'</span><span class="p">];</span>
+ <span class="nb">count</span><span class="p">(</span><span class="nv">$names</span><span class="p">)</span> <span class="c1">// 3
+</span></code></pre></div>    </div>
+
+    <p>User Defined function</p>
+
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">function</span> <span class="nf">add</span> <span class="p">(</span><span class="nv">$number1</span><span class="p">,</span> <span class="nv">$number2</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">return</span> <span class="nv">$number1</span> <span class="o">+</span> <span class="nv">$number2</span><span class="p">;</span>
+ <span class="p">}</span>
+ <span class="nx">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+ <span class="nx">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+</code></pre></div>    </div>
+  </li>
+  <li>operator
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">+</span> <span class="o">.</span> <span class="o">-</span> <span class="o">*</span> <span class="o">/</span> <span class="o">%</span> <span class="o">=</span> <span class="o">&gt;</span> <span class="o">&lt;</span> <span class="o">==</span> <span class="o">===</span>  <span class="o">++</span> <span class="o">--</span> <span class="o">|</span> 
+</code></pre></div>    </div>
+    <p><code class="highlighter-rouge">+</code> additional operator 
+<code class="highlighter-rouge">.</code> concatenation operator
+<code class="highlighter-rouge">%</code> (Modulus) returns the division remainder  <br />
+<code class="highlighter-rouge">++</code> increse by 1  <br />
+<code class="highlighter-rouge">--</code> decrese by 1  <br />
+<code class="highlighter-rouge">==</code> equal check  <br />
+<code class="highlighter-rouge">===</code> identity check (equl check + datatype check)</p>
+  </li>
+  <li>namespace</li>
+</ol>
+
+<p>When we give namespace to file we will use <code class="highlighter-rouge">namespace</code> keyword. When we use this we will use <code class="highlighter-rouge">use</code> keyword. Keeping namespace like keeping people name.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  //keeping namespace
+  <span class="cp">&lt;?php
+  namespace Dhaka;
+  class HelloWorld {
+
+  } 
+  //some php code
+  ?&gt;</span>
+  <span class="cp">&lt;?php
+  namespace Chittagong;
+  class HelloWorld {
+  
+  } 
+  ?&gt;</span>
+
+  //In 2 cases we make a class HelloWorld. But since we add there namespace `Dhaka` and `Chittagong` So it won't conflict with each other
+  //using namespace
+  <span class="cp">&lt;?php</span>
+  <span class="nx">Use</span> <span class="nx">Dhaka\HelloWorld</span><span class="p">;</span>
+  <span class="cp">?&gt;</span>
+
+</code></pre></div></div>
+
+<h1 id="basic-php-tag">Basic php tag</h1>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="cp">&lt;?php ?&gt;</span>
+</code></pre></div></div>
+
+<p>so php start tag is <code class="highlighter-rouge">&lt;?php</code> and end tag is <code class="highlighter-rouge">?&gt;</code></p>
+
+<h1 id="to-create-a-mini-php-server">to create a mini php server</h1>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  php -S localhost:8000
+</code></pre></div></div>
+
+<p>Here <code class="highlighter-rouge">8000</code> is port number. You can use 4 digit number</p>
+
+<h1 id="to-write-something-in-php">to write something in php</h1>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">echo</span> <span class="s1">'Hello World'</span><span class="p">;</span>
+  <span class="c1">//or
+</span>  <span class="k">print</span> <span class="p">(</span><span class="s1">'Hello World'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h1 id="difference-between-php-and-js">difference between php and js</h1>
+<p>In <code class="highlighter-rouge">js</code>, we getting value from object by <code class="highlighter-rouge">.</code> notation. In <code class="highlighter-rouge">php</code>, we will getting value by <code class="highlighter-rouge">-&gt;</code> notation.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  //js
+  object.name;
+
+  //php
+  $object-&gt;name;
+</code></pre></div></div>
+
+<p>In js we use <code class="highlighter-rouge">+</code> as concatenation operator but in php we use <code class="highlighter-rouge">.</code> as concatenation operator.</p>
+
+
+  </div>
+
+  <div class="text-center p-5">
+    
+      <a class="btn btn-info btn-lg .d-inline-block my-1" href="http://localhost:4000/uy23/class-16/">&laquo; Class 16</a>
+    
+    
+      <a class="btn btn-success btn-lg .d-inline-block my-1" href="http://localhost:4000/uy23/class-18/">Class 18 &raquo;</a>
+    
+  </div>
+
+
+    <div class="my-5">
+    <div id="disqus_thread"></div>
+    <script>
+
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ey-h43.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+</div>
+
+
+  <footer class="bg_random_color text-light py-5 mt-5">
+    <div class="container">
+      
+      <p><a class="text-light text-underline" href="http://localhost:4000/uy23/">UY-23</a> is maintained by Shibu deb polo.</p>
+      <p> <a class="btn-link text-light" href="https://poloey.gitlab.io/"> <i class="fa fa-github" aria-hidden="true"></i> All Batches </a> </p>
+      <p>
+        <a class="btn-link text-light" target="_blank" href="https://www.facebook.com/groups/topupuy23/">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          Group
+        </a>
+      </p>
+      <p>
+        <a class="btn-link text-light" target="_blank" href="https://web.facebook.com/messages/t/1710131265718158">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          messenger
+        </a>
+      </p>
+      <p class="footer-text">
+        Hosted on Github Page. This Website will be references for LICT UY-23 batch for life time. Since Github page will never down. Thanks to opensource technology. Hope this attempt make work flow easier for all students of UY-23 batch. Added daily documentation and class file in this website
+      </p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="/uy23/assets/bootstrap/popper.min.js"></script>
+  <script src="/uy23/assets/bootstrap/bootstrap.min.js"></script>
+  <script src="/uy23/assets/bootstrap/color.js"></script>
+</body>
+</html>

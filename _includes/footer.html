@@ -1,0 +1,32 @@
+  <footer class="bg_random_color text-light py-5 mt-5">
+    <div class="container">
+      {%if page.active == 'about' %}
+      <blockquote class="blockquote">
+        <p> I am using a tiny color plugin that allow this site changing background color dynamically every time you load this page. You may use this color plugin in your project. You can use it without any dependency or you can use along site jquery. Here is the <a class="text-light text-underline" target="_blank" href="https://poloey.github.io/colorjs">Link</a> or <a class="text-light text-underline" target="_blank" href="https://github.com/poloey/colorjs">Fork here</a> </p>
+      </blockquote>
+      {% endif %}
+      <p><a class="text-light text-underline" href="{{site.url}}{{site.baseurl}}/">{{ site.title }}</a> is maintained by Shibu deb polo.</p>
+      <p> <a class="btn-link text-light" href="{{site.all_batches}}"> <i class="fa fa-github" aria-hidden="true"></i> All Batches </a> </p>
+      <p>
+        <a class="btn-link text-light" target="_blank" href="https://www.facebook.com/groups/{{site.facebook_group}}/">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          Group
+        </a>
+      </p>
+      <p>
+        <a class="btn-link text-light" target="_blank" href="https://web.facebook.com/messages/t/{{site.facebook_messenger}}">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          messenger
+        </a>
+      </p>
+      <p class="footer-text">
+        Hosted on Github Page. This Website will be references for LICT {{site.title}} batch for life time. Since Github page will never down. Thanks to opensource technology. Hope this attempt make work flow easier for all students of {{site.title}} batch. Added daily documentation and class file in this website
+      </p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="{{ "assets/bootstrap/popper.min.js" | relative_url }}"></script>
+  <script src="{{ "assets/bootstrap/bootstrap.min.js" | relative_url }}"></script>
+  <script src="{{ "assets/bootstrap/color.js" | relative_url }}"></script>
+</body>
+</html>

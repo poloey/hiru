@@ -1,0 +1,11 @@
+---
+date: 2017-12-17
+name: Assignment - Make a template using html, css, js, bootstrap. eCommerce, Management, ticketing template preferred     
+number: 2
+homepage: true
+class: bg-danger text-light
+---
+Repo name: `<your_github_name>_template`       
+Suppose, my github name is `poloey`. In my case, assignment repo name will be `poloey_template` 
+
+

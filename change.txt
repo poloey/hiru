@@ -1,0 +1,33 @@
+# folder
+
+_projects
+_notices
+
+
+# layout
+projects.html
+notices.html
+project.html
+notice.html
+
+
+# _config.yml
+  - scope:
+      path: ""
+      type: notices
+    values:
+      layout: notice
+      valid: true
+      no: 1
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+      team: []
+      no: 1
+      
+# 
+
+
+
