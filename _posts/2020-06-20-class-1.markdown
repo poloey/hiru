@@ -1,7 +1,8 @@
 ---
 repo: 01_uy23_nov_09
 number: 1
-show_download: false
+download_class: false
+view_on_github: false
 ---
 
 # Software we used for git bash in windows
