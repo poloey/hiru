@@ -60,10 +60,10 @@ h1 {
 }
 ~~~
 
-here,
-`h1` - tag    
-`color` - property
-`red` - value
+here,     
+`h1` - tag       
+`color` - property      
+`red` - value       
 
 * 2 - id selector 
 
