@@ -50,6 +50,12 @@ download_class: true
 </style>
 ~~~
 
+* External style 
+
+~~~html
+<link rel="stylesheet" href="style.css">
+~~~
+
 ## css selector 
 
 * 1 - tag selector
