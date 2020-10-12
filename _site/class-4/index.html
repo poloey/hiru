@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Class 4 | Hiru-sir</title>
+  <link rel="icon" href="http://localhost:4000/hiru/assets/images/page/favicon.ico">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="/hiru/assets/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/hiru/css/style.css">
+</head>
+<body class="bg_random_color">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="http://localhost:4000/hiru/">Hiru-sir</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/hiru/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/hiru/about">About</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/hiru/type" target="_blank">Type</a>
+          </li>
+<!--           <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/hiru/students">Students</a>
+          </li>
+          <li class="nav-item ">
+            <a href="http://localhost:4000/hiru/notices" class="nav-link">Notices</a>
+          </li>
+ -->        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container bg-light py-5 my-5">
+  <div class="py-2 text-center">
+      <h1 class="title">
+        Class 4
+      </h1>
+      <h3 class="text-muted">
+          Oct 12, 2020 - Mon
+      </h3>
+      </h1>
+      <hr>
+      <div>
+        
+          <a target="_blank" class="btn btn-lg btn-outline-info mx-3 my-3" href="https://github.com/poloey/hiru_sir_class_4">View On Github</a>
+        
+        
+          <a class="btn btn-lg btn-outline-danger mx-3" href="https://codeload.github.com/poloey/hiru_sir_class_4/zip/master">Download class file</a>
+        
+      </div>
+      <hr>
+  </div>
+
+  <div class="">
+    <h1 id="css">CSS</h1>
+
+<p>CSS stands for Cascading Style Sheets</p>
+
+<h1 id="basic-css-format">Basic css format</h1>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">tag_selector</span><span class="o">/</span><span class="nf">#id_selector</span><span class="o">/</span><span class="nc">.class_selector</span> <span class="p">{</span>
+  <span class="py">property</span><span class="p">:</span> <span class="n">value</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">//</span> <span class="nt">like</span> <span class="nt">following</span>
+<span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nf">#hello</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.hello</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="color">color</h1>
+<h2 id="name">name</h2>
+<p>color name like red, green, blue</p>
+
+<h2 id="hexadecimal">hexadecimal</h2>
+<p>hexa = 6 (a to f)  <br />
+decimal = 10 (0 to 9) hexadecimal = 16 (0 to f)   <br />
+hightest value f is white   <br />
+lowest value is 0 is black   <br />
+white hexadecimal value = #ffffff   <br />
+black hexadecimal value = #00000   <br />
+when first 3 letter is as last 3 letter you can omit last 3 digit. like #fff</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">div</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#00bfff</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#ffffff</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="rgb">rgb()</h2>
+<p>rgb stands for red, green, blue    <br />
+rgb() is a function. which require 3 parameter. red, green, blue     <br />
+rgb a value is 0 to 255  <br />
+so hightest value 255 is white    <br />
+so lowest value 0 is black    <br />
+white rgb value = rgb(255, 255, 255)   <br />
+black rgb value = rgb(0, 0, 0)</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">div</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nb">rgb</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">191</span><span class="p">,</span> <span class="m">255</span><span class="p">);</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nb">rgb</span><span class="p">(</span><span class="m">255</span><span class="p">,</span> <span class="m">255</span><span class="p">,</span> <span class="m">255</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="rgba">rgba()</h2>
+<p>rgba stands for red, green, blue, alpha. rga will be like state above rga. 4th parameter a stands for alpha. which define transparency. transparency maximum value is 1 and minimum value is 0.
+suppose I want black color with 50% transparency so value will be rgba(0, 0, 0, 0.5)</p>
+
+<h2 id="hsl">hsl()</h2>
+<p>HSL stands for hue, saturation, and lightness.   <br />
+hsl() is a function. which require 3 parameter. hue, saturation, lightness.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">div</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="n">hsl</span><span class="p">(</span><span class="m">180</span><span class="p">,</span> <span class="m">50%</span><span class="p">,</span> <span class="m">50%</span><span class="p">);</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="n">hsl</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0%</span><span class="p">,</span> <span class="m">100%</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="hue">Hue</h3>
+<p>Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, 240 is blue.</p>
+
+<h3 id="saturation">Saturation</h3>
+<p>Saturation is a percentage value; 0% means a shade of gray and 100% is the full color.</p>
+
+<h3 id="lightness">Lightness</h3>
+<p>Lightness is also a percentage; 0% is black, 100% is white.</p>
+
+<h1 id="unit">Unit</h1>
+
+<h2 id="absolute-unit">absolute unit:</h2>
+
+<ul>
+  <li>px</li>
+  <li>pt</li>
+  <li>cm</li>
+  <li>in</li>
+</ul>
+
+<h2 id="relative-unit">relative unit:</h2>
+
+<ul>
+  <li>em</li>
+  <li>rem</li>
+  <li>%</li>
+</ul>
+
+
+  </div>
+
+  <div class="text-center p-5">
+    
+      <a class="btn btn-info btn-lg .d-inline-block my-1" href="http://localhost:4000/hiru/class-3/">&laquo; Class 3</a>
+    
+    
+  </div>
+
+
+    <div class="my-5">
+    <div id="disqus_thread"></div>
+    <script>
+
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ey-h43.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+</div>
+
+
+  <footer class="bg_random_color text-light py-5 mt-5">
+    <div class="container">
+      
+      <p><a class="text-light text-underline" href="http://localhost:4000/hiru/">Hiru-sir</a> is maintained by Shibu deb polo.</p>
+      <p> <a class="btn-link text-light" href="https://poloey.gitlab.io/"> <i class="fa fa-github" aria-hidden="true"></i> All Batches </a> </p>
+      <p>
+        <a class="btn-link text-light" target="_blank" href="https://www.facebook.com/groups/topupuy23/">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          Group
+        </a>
+      </p>
+      <p>
+        <a class="btn-link text-light" target="_blank" href="https://web.facebook.com/messages/t/1710131265718158">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          messenger
+        </a>
+      </p>
+      <p class="footer-text">
+        Hosted on Github Page. This Website will be references for LICT Hiru-sir batch for life time. Since Github page will never down. Thanks to opensource technology. Hope this attempt make work flow easier for all students of Hiru-sir batch. Added daily documentation and class file in this website
+      </p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="/hiru/assets/bootstrap/popper.min.js"></script>
+  <script src="/hiru/assets/bootstrap/bootstrap.min.js"></script>
+  <script src="/hiru/assets/bootstrap/color.js"></script>
+</body>
+</html>

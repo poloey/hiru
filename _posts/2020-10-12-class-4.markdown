@@ -1,0 +1,107 @@
+---
+repo: hiru_sir_class_4
+title: Class 4
+number: 4
+download_class: true
+---
+
+# CSS 
+
+CSS stands for Cascading Style Sheets
+
+# Basic css format
+~~~css
+tag_selector/#id_selector/.class_selector {
+  property: value;
+}
+
+// like following
+body {
+  background-color: red;
+}
+#hello {
+  background-color: red;
+}
+.hello {
+  background-color: red;
+}
+~~~
+
+# color
+## name
+color name like red, green, blue
+
+## hexadecimal
+hexa = 6 (a to f)    
+decimal = 10 (0 to 9) hexadecimal = 16 (0 to f)     
+hightest value f is white     
+lowest value is 0 is black     
+white hexadecimal value = #ffffff     
+black hexadecimal value = #00000     
+when first 3 letter is as last 3 letter you can omit last 3 digit. like #fff      
+~~~css
+div {
+  background-color: #00bfff;
+  color: #ffffff;
+}
+~~~
+
+## rgb()
+rgb stands for red, green, blue      
+rgb() is a function. which require 3 parameter. red, green, blue       
+rgb a value is 0 to 255    
+so hightest value 255 is white      
+so lowest value 0 is black      
+white rgb value = rgb(255, 255, 255)     
+black rgb value = rgb(0, 0, 0)        
+~~~css
+div {
+  background-color: rgb(0, 191, 255);
+  color: rgb(255, 255, 255);
+}
+~~~
+
+## rgba()
+rgba stands for red, green, blue, alpha. rga will be like state above rga. 4th parameter a stands for alpha. which define transparency. transparency maximum value is 1 and minimum value is 0.
+suppose I want black color with 50% transparency so value will be rgba(0, 0, 0, 0.5)
+
+## hsl()
+HSL stands for hue, saturation, and lightness.     
+hsl() is a function. which require 3 parameter. hue, saturation, lightness.            
+      
+~~~css
+div {
+  background-color: hsl(180, 50%, 50%);
+  color: hsl(0, 0%, 100%);
+}
+~~~
+
+### Hue
+Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, 240 is blue.       
+
+### Saturation
+Saturation is a percentage value; 0% means a shade of gray and 100% is the full color.      
+
+### Lightness
+Lightness is also a percentage; 0% is black, 100% is white.      
+
+# Unit
+
+## absolute unit:
+
+* px
+* pt
+* cm
+* in
+
+## relative unit:   
+
+* em
+* rem
+* %
+
+
+
+
+
+
